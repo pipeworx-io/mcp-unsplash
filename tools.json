@@ -1,0 +1,205 @@
+[
+  {
+    "name": "search_photos",
+    "description": "Search Unsplash photos by keyword (required); returns paginated results with image URLs, dimensions, photographer info, and alt text.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "photo",
+    "description": "Fetch full metadata for a single Unsplash photo by id, including all image URLs (raw, full, regular, small, thumb), EXIF, location, tags, and photographer.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "photo_random",
+    "description": "Retrieve one or more random Unsplash photos; supports optional filters (query, orientation, collections, topics, username, content_filter) passed as extra params.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "photo_download",
+    "description": "Trigger the Unsplash required download-tracking event for a photo by id and return the download URL; must be called before presenting the download link to users per Unsplash API guidelines.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "photo_statistics",
+    "description": "Fetch view, download, and like statistics for a single Unsplash photo by id; supports resolution (\"days\") and quantity (1–30) to control the time-series window.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "resolution": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "list_photos",
+    "description": "Fetch Unsplash's public editorial feed of recently curated photos in chronological or popular order; returns paginated photo objects with URLs and metadata.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "user",
+    "description": "Fetch the public Unsplash profile for a given username, including bio, location, follower/following counts, total photos/likes/collections, and portfolio URL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "username"
+      ]
+    }
+  },
+  {
+    "name": "user_photos",
+    "description": "List photos uploaded by a specific Unsplash username; returns paginated photo objects with image URLs, likes, and metadata.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "username"
+      ]
+    }
+  },
+  {
+    "name": "user_likes",
+    "description": "List photos that a specific Unsplash username has liked; returns paginated photo objects with image URLs, photographer, and metadata.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "username"
+      ]
+    }
+  },
+  {
+    "name": "collections",
+    "description": "List featured Unsplash collections in paginated order; returns collection id, title, description, total photos, cover photo, and curator info.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "collection",
+    "description": "Fetch metadata for a single Unsplash collection by id, including title, description, total photos, tags, cover photo, and curator profile.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "collection_photos",
+    "description": "List photos inside a specific Unsplash collection by id; returns paginated photo objects with image URLs and metadata.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "topics",
+    "description": "List Unsplash editorial topics (curated content channels like \"nature\", \"architecture\"); returns topic id, slug, title, description, cover photo, and curator.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "topic",
+    "description": "Fetch metadata for a single Unsplash topic by id or slug (e.g. \"animals\"), including title, description, total photos, cover photo, and top contributors.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id_or_slug": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id_or_slug"
+      ]
+    }
+  },
+  {
+    "name": "topic_photos",
+    "description": "List photos belonging to a specific Unsplash topic by id or slug; returns paginated photo objects with image URLs, EXIF, and photographer info.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id_or_slug": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id_or_slug"
+      ]
+    }
+  }
+]
