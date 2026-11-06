@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-unsplash",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Unsplash MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "unsplash",
     "gatewaySlug": "unsplash",
-    "sourceHash": "v1-c4ba64b9d78e939bf9fe28b51f251058976b32107a3387102ff0f9908a38686d",
-    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
+    "sourceHash": "v1-8a246b65844a6d441cb99521bd417ca8c19313d981b2af34a1a6f3b908c99615",
+    "sourceCommit": "ca52e7ed1e1ccad897c2da1b0fa105edc0bc3b2e"
   }
 }
